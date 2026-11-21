@@ -58,13 +58,24 @@ h1 span{display:inline-block;text-shadow:0 5px 18px #0869e817}
   .plan-month{font-size:.82rem}
 }
 
+
+.download-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+.download-card{padding:27px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 12px 30px #09265e0c;display:flex;flex-direction:column}
+.download-card.primary-card{border:2px solid var(--blue);background:linear-gradient(145deg,#f1f7ff,#fff 70%)}
+.download-card h3{margin:12px 0 7px;color:var(--navy);font-size:1.3rem}
+.download-card p{color:var(--muted);margin:0 0 18px}
+.download-card .btn{margin-top:auto;align-self:flex-start}
+.download-kicker{font-size:.75rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.download-note{margin-top:18px;padding:15px 18px;border-radius:12px;background:#fff5e8;border-left:4px solid var(--orange);color:#68451d;font-size:.88rem}
+@media(max-width:700px){.download-grid{grid-template-columns:1fr}.download-card .btn{width:100%}}
+
 </style>
 </head>
 <body>
   <header class="top"><nav class="wrap" aria-label="Navigation principale">
     <a class="brand" href="#" aria-label="OmniKès, accueil"><img src="assets/omnikes-logo.jpeg" alt="OmniKès — Logiciel POS"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu ☰</button>
-    <div class="navlinks" id="site-menu"><a href="#avantages">Avantages</a><a href="#tarifs">Tarifs</a><a href="#fonctionnement">Fonctionnement</a><a href="#essai">Essai</a><a class="nav-cta" href="https://github.com/Mc-Pentester/omnikes/releases">Téléchargements</a></div>
+    <div class="navlinks" id="site-menu"><a href="#avantages">Avantages</a><a href="#tarifs">Tarifs</a><a href="#fonctionnement">Fonctionnement</a><a href="#essai">Essai</a><a class="nav-cta" href="#telechargements">Téléchargements</a></div>
   </nav></header>
   <main>
     <section class="hero wrap">
@@ -72,7 +83,7 @@ h1 span{display:inline-block;text-shadow:0 5px 18px #0869e817}
         <div class="eyebrow"><span class="dot"></span> Conçu pour tous les commerces · petits & grands</div>
         <h1>Gérez plus.<br>Vendez mieux.<br><span>Développez votre commerce !</span></h1>
         <p>OmniKès est un logiciel POS moderne, simple et puissant pour gérer vos ventes, stocks et clients en toute simplicité.</p>
-        <div class="actions"><a class="btn primary" href="https://github.com/Mc-Pentester/omnikes/releases">Voir les téléchargements</a><a class="btn secondary" href="#avantages">Découvrir OmniKès</a></div>
+        <div class="actions"><a class="btn primary" href="#telechargements">Voir les téléchargements</a><a class="btn secondary" href="#avantages">Découvrir OmniKès</a></div>
         <p class="note">Disponible en installation locale. Le cloud et la boutique en ligne sont facultatifs.</p>
         <div class="hero-proof"><span>✓ Fonctionnement local</span><span>✓ Données sous votre maîtrise</span><span>✓ Pour petits et grands commerces</span></div>
       </div>
@@ -169,6 +180,29 @@ h1 span{display:inline-block;text-shadow:0 5px 18px #0869e817}
     <section class="section wrap" id="fonctionnement">
       <div class="section-head"><div class="eyebrow">Simple à comprendre</div><h2>Un parcours clair pour démarrer.</h2><p>Les étapes de mise en route seront documentées avec chaque version officielle.</p></div>
       <div class="steps"><article class="step"><div class="num">ÉTAPE 01</div><h3>Installer</h3><p>Récupérez l'installateur Windows depuis la page officielle des versions lorsqu'il sera publié.</p></article><article class="step"><div class="num">ÉTAPE 02</div><h3>Configurer</h3><p>Préparez votre organisation, vos magasins et vos premiers paramètres de gestion.</p></article><article class="step"><div class="num">ÉTAPE 03</div><h3>Gérer</h3><p>Centralisez progressivement vos opérations quotidiennes dans OmniKès.</p></article></div>
+    </section>
+
+    <section class="section wrap" id="telechargements">
+      <div class="section-head">
+        <div class="eyebrow">Deux accès, deux usages</div>
+        <h2>Téléchargez OmniKès ou récupérez son code source.</h2>
+        <p>Choisissez le paquet adapté à votre besoin : une installation prête à l'emploi ou les fichiers destinés aux développeurs.</p>
+      </div>
+      <div class="download-grid">
+        <article class="download-card primary-card">
+          <div class="download-kicker">Pour les commerces · recommandé</div>
+          <h3>OmniKès pour Windows</h3>
+          <p>Installateur prêt à utiliser. Il permet de mettre en place OmniKès sans télécharger ni manipuler le code source.</p>
+          <a class="btn primary" href="https://github.com/Mc-Pentester/omnikes/releases">Télécharger l’installateur</a>
+        </article>
+        <article class="download-card">
+          <div class="download-kicker">Pour les développeurs</div>
+          <h3>Code source OmniKès</h3>
+          <p>Archive ZIP du dépôt pour examiner le projet, contribuer ou préparer un environnement de développement.</p>
+          <a class="btn secondary" href="https://github.com/Mc-Pentester/omnikes/archive/refs/heads/main.zip">Télécharger le code source (.zip)</a>
+        </article>
+      </div>
+      <p class="download-note"><strong>À savoir :</strong> le dépôt source est actuellement public sur GitHub. Toute personne disposant du lien peut donc consulter et télécharger le code. Le bouton ci-dessus ne constitue pas une restriction d’accès.</p>
     </section>
     <section class="section wrap" id="essai">
       <div class="callout"><div><div class="eyebrow">Découvrir OmniKès</div><h2>Prêt à reprendre la maîtrise de votre commerce ?</h2><p>Un essai gratuit de 7 jours est prévu. Les modalités d'activation et les conditions seront précisées au lancement officiel.</p></div><a class="btn primary" href="https://github.com/Mc-Pentester/omnikes">Suivre le projet</a></div>
